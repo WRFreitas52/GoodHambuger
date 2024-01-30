@@ -1,0 +1,23 @@
+﻿@model List<Extra>
+
+<h2>List of Extras</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Is Drink</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var extra in Model)
+        {
+            <tr>
+                <td>@extra.Name</td>
+                <td>$@extra.Price</td>
+                <td>@(extra.IsDrink ? "Yes" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>

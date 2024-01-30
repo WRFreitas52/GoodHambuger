@@ -1,0 +1,26 @@
+﻿@model List<Order>
+
+<h2>List of Sandwiches and Extras</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sandwich</th>
+            <th>Extras</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Sandwich.Name - $@order.Sandwich.Price</td>
+                <td>
+                    @foreach (var extra in order.Extras)
+                    {
+                        <div>@extra.Name - $@extra.Price</div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

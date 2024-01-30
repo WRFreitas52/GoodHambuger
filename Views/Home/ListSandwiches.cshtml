@@ -1,0 +1,21 @@
+﻿@model List<Sandwich>
+
+<h2>List of Sandwiches</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sandwich in Model)
+        {
+            <tr>
+                <td>@sandwich.Name</td>
+                <td>$@sandwich.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
